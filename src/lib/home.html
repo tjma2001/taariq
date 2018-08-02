@@ -1,32 +1,35 @@
 <template vuedart>
-  <div class="ui vertical masthead center aligned segment">
+  <div class="container">
     <header-component></header-component>
-    <div class="ui vertical masthead center aligned segment mini">
-      <div id="banner" class="ui container"></div>
+    <div id="banner" class="ui vertical masthead center aligned segment mini">
+      <div class="ui container"></div>
     </div>
-    
+    <div class="pusher"></div>
     <div id="text-area" class="ui segment raised">
-        <p>test text is happening here</p>
+        <h3>A second attempt</h3>
+        <p></p>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-  #text-area {
-    position: relative;
-    top: -145px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   #banner {
     background-image: url(/assets/base.jpg);
     background-size: cover;
     background-position: center top;
-    height: 70vh;
+    height: 60vh;
     width: 100vw;
     text-align: center;
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 0;
+  }
+  
+  #text-area {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .pusher {
+    height: 45vh;
   }
 </style>

@@ -28,7 +28,7 @@ Future main() async {
   final router = VueRouter(routes: [
     VueRoute(path: '/', component: Home()),
     VueRoute(path: '/cv', component: Cv()),
-    // VueRoute(path: '/contact', component: Contact()),
+    VueRoute(path: '/contact', component: Contact()),
   ],
 );
 

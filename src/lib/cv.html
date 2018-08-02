@@ -1,17 +1,19 @@
 <template vuedart>
-  <div class="ui vertical masthead center aligned segment">
+  <div class="container">
     <header-component class=""></header-component>
-    <div class="ui vertical masthead center aligned segment mini">
-      <div id="banner" class="ui container"></div>
+    <div id="banner" class="ui vertical masthead center aligned segment mini">
+      <div class="ui container"></div>
     </div>
+    <div class="pusher"></div>
     <div id="page-content-area" class="ui segment raised">
       <img
         id="avatar_image"
         class="ui centered small circular image" 
         src="/assets/me.png">
       <div class="header">
-        <h1>Taariq Mullins</h1>
-        <h5>Developer</h2>
+        <div class="title">Taariq Mullins</div>
+        <div class="subtitle">Developer</div>
+
         <div>
           <a href="https://www.facebook.com/tjma2001" target="_blank">
             <i class="big facebook square icon"></i></a>
@@ -22,7 +24,7 @@
             <i class="big github square icon"></i>
           </a>
         </div>
-        <p>
+        <p class="personal description">
           I have strong skills in project management and the ability to handle 
           the entire lifecycle of a project. This applies to the entire stack 
           from project conception, continuous integration and deployment. 
@@ -56,10 +58,12 @@
                       September 2017 - Current
                   </span>
                   <div class="ui left aligned">
-                    <h4>Freelance</h4>
-                    <h5>Full Stack Software Engineer</h5>
+                    <div class="workdetails">
+                      <div class="title">Freelance</div>
+                      <div class="subtitle">Full Stack Software Engineer</div>
+                    </div>
 
-                    <p>
+                    <p class="workdescription">
                       Providing software services, kubernetes integrations and 
                       product development. 
                     </p>
@@ -72,10 +76,12 @@
                       July 2013 - August 2017
                   </span> 
                   <div class="ui left aligned">
-                    <h4>WhereIsMyTransport, Cape Town</h4>
-                    <h5>Full Stack Software Engineer</h5>
+                    <div class="workdetails">
+                      <div class="title">WhereIsMyTransport, Cape Town</div>
+                      <div class="subtitle">Full Stack Software Engineer</div>
+                    </div>
 
-                    <p>
+                    <p class="workdescription">
                       Here I was responsible for many projects which I 
                       managed completely from the ground up. I had large 
                       roles to play in provisioning and management of 
@@ -96,10 +102,12 @@
                       March 2010 - December 2011
                   </span>
                   <div class="ui left aligned">
-                    <h4>Bitfire, Cape Town</h4>
-                    <h5>Partner</h5>
+                    <div class="workdetails">
+                      <div class="title">Bitfire, Cape Town</div>
+                      <div class="subtitle">Partner</div>
+                    </div>
 
-                    <p>
+                    <p class="workdescription">
                       Asterisk, Web development, VoIP, Mikrotik
                     </p>
                   </div>
@@ -111,8 +119,10 @@
                       Jan 2009 - March 2010
                   </span> 
                   <div class="ui left aligned">
-                    <h4>Vodacom Gated Services, Cape Town</h4>
-                    <h5>Senior Network Engineer</h5>
+                    <div class="workdetails">
+                      <div class="title">Vodacom Gated Services, Cape Town</div>
+                      <div class="subtitle">Senior Network Engineer</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -125,8 +135,10 @@
                         March 2010 - December 2011
                     </span>
                     <div class="ui left aligned">
-                      <h4>SUGA Communications, Cape Town</h4>
-                      <h5>Partner</h5>
+                      <div class="workdetails">
+                        <div class="title">SUGA Communications, Cape Town</div>
+                        <div class="subtitle">Partner</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -231,7 +243,6 @@
 
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -248,24 +259,43 @@
   .header {
     position: relative;
     top: -60px;
+
+    .title {
+      font-size: 2em;
+      font-weight: bold!important;
+    }
+
+    .subtitle {
+      margin: 10px 0 15px 0;
+      font-weight: bold;
+    }
   }
 
-  #page-content-area {
-    position: relative;
-    top: -145px;
-    margin-left: 20px;
-    margin-right: 20px;
+  .card-title{
+    font-weight: bolder;
+    font-size: larger;
   }
 
-  #banner {
-    background-image: url(/assets/base.jpg);
-    background-size: cover;
-    background-position: center top;
-    height: 20vh;
-    width: 100vw;
-    text-align: center;
-    position: relative;
-    top: -100px;
+  .description.personal {
+    margin-top: 15px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  
+  .workdetails {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: larger;
+
+    .subtitle {
+      font-weight: lighter;
+      font-size: x-small;
+    }
+  }
+
+  .workdescription {
+    text-align: justify;
+    margin-top: 5px;
   }
 
   .workitem {
