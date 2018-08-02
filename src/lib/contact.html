@@ -8,21 +8,30 @@
     </div>
     <div class="pusher"></div>
     <div id="page-content-area" class="ui segment raised">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdri7s-c0IdzE0a7ImPqFETL6H1RCvL-tmROB736z_jjcaavg/viewform?embedded=true" 
-        width="700"
-        height="100%"
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-        onload="this.style.height=this.contentWindow.document.body.scrollHeight +'px';">
-        Loading...
-      </iframe>
+        <form
+          class="ui form"
+          action="https://formspree.io/taariq@figornaartjie.com" 
+          method="POST">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="name">
+          </div>
+          
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name=_replyTo placeholder="email">
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea name="message" placeholder="message"></textarea>
+          </div>
+          
+          <button class="ui button" type="submit">Submit</button>
+      </form>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-  #page-content-area {
-    height: 100%;
-  }
 </style>

@@ -6,129 +6,106 @@
     </div>
     <div class="pusher"></div>
     <div id="page-content-area" class="ui segment raised">
-      <img
-        id="avatar_image"
-        class="ui centered small circular image" 
-        src="/assets/me.png">
-      <div class="header">
-        <div class="title">Taariq Mullins</div>
-        <div class="subtitle">Developer</div>
+      <div class="row">
+        <img
+          id="avatar_image"
+          class="ui centered small circular image"
+          style="height: 150px;"
+          src="/assets/me.png">
+      </div>
+      <div class="row">
+        <div class="header">
+          <div class="title">Taariq Mullins</div>
+          <div class="subtitle">Developer</div>
 
-        <div>
-          <a href="https://www.facebook.com/tjma2001" target="_blank">
-            <i class="big facebook square icon"></i></a>
-          <a href="https://twitter.com/tjma2001" target="_blank">
-            <i class="big twitter square icon"></i>
-          </a>
-          <a href="https://github.com/tjma2001" target="_blank">
-            <i class="big github square icon"></i>
-          </a>
+          <div>
+            <a href="https://www.facebook.com/tjma2001" target="_blank">
+              <i class="big facebook square icon"></i></a>
+            <a href="https://twitter.com/tjma2001" target="_blank">
+              <i class="big twitter square icon"></i>
+            </a>
+            <a href="https://github.com/tjma2001" target="_blank">
+              <i class="big github square icon"></i>
+            </a>
+          </div>
+          <p class="personal description">
+            I have strong skills in project management and the ability to handle 
+            the entire lifecycle of a project. This applies to the entire stack 
+            from project conception, continuous integration and deployment. 
+          </p>
         </div>
-        <p class="personal description">
-          I have strong skills in project management and the ability to handle 
-          the entire lifecycle of a project. This applies to the entire stack 
-          from project conception, continuous integration and deployment. 
-        </p>
       </div>
 
-        <div class="ui twelve column centered grid">
-          <div class="column workitem" v-bind:class="{ active: selection == 1 }" v-on:click="select(1)">
-            <i class="big briefcase icon"></i>
-            <div class="description">work</div>
-          </div>
+      <div class="row workitems">
+        <div class="ui twelve column centered stackable grid container">
+            <div class="column workitem" v-bind:class="{ active: selection == 1 }" v-on:click="select(1)">
+              <i class="big briefcase icon"></i>
+              <div class="description">work</div>
+            </div>
 
-          <div class="two wide column workitem" v-bind:class="{ active: selection == 2 }" v-on:click="select(2)">
-            <i class="big folder outline icon"></i>
-            <div class="description">education</div>
-          </div>
+            <div class="two wide column workitem" v-bind:class="{ active: selection == 2 }" v-on:click="select(2)">
+              <i class="big pencil alternate icon"></i>
+              <div class="description">education</div>
+            </div>
 
-          <div class="two wide column workitem" v-bind:class="{ active: selection == 3 }" v-on:click="select(3)">
-            <i class="big book icon"></i>
-            <div class="description">publications</div>
-          </div>
+            <div class="two wide column workitem" v-bind:class="{ active: selection == 3 }" v-on:click="select(3)">
+              <i class="big book icon"></i>
+              <div class="description">publications</div>
+            </div>
         </div>
+      </div>
 
-        <div class="details">
-          <div class="ui tab" v-bind:class="{ active: selection == 1 }" data-tab="work">
-            
-            <div class="ui two column grid">
-              <div class="column">
-                <div class="ui raised segment">
-                  <span class="ui blue label">
-                      September 2017 - Current
-                  </span>
-                  <div class="ui left aligned">
-                    <div class="workdetails">
-                      <div class="title">Freelance</div>
-                      <div class="subtitle">Full Stack Software Engineer</div>
-                    </div>
-
-                    <p class="workdescription">
-                      Providing software services, kubernetes integrations and 
-                      product development. 
-                    </p>
+      <!-- <div class=""> -->
+        <!-- <div class="details"> -->
+            <div class="ui tab" v-bind:class="{ active: selection == 1 }" data-tab="work">
+                <div class="two column stackable ui grid">
+                    <!-- <div class="center aligned row"> -->
+                      <div class="column">
+                        <div class="ui raised segment">
+                          <span class="ui blue label">
+                              September 2017 - Current2
+                          </span>
+                          <div class="ui left aligned">
+                            <div class="workdetails">
+                              <div class="title">Freelance</div>
+                              <div class="subtitle">Full Stack Software Engineer</div>
+                            </div>
+        
+                            <p class="workdescription">
+                              Providing software services, kubernetes integrations and 
+                              product development. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="ui raised segment">
+                          <span class="ui blue label">
+                              July 2013 - August 2017
+                          </span> 
+                          <div class="ui left aligned">
+                            <div class="workdetails">
+                              <div class="title">WhereIsMyTransport, Cape Town</div>
+                              <div class="subtitle">Full Stack Software Engineer</div>
+                            </div>
+        
+                            <p class="workdescription">
+                              Here I was responsible for many projects which I 
+                              managed completely from the ground up. I had large 
+                              roles to play in provisioning and management of 
+                              critical infrastructure. Spinning up support 
+                              web-services was another task I was often engaged 
+                              in due to my speed and ease with which I handled 
+                              these tasks. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- </div> -->
                   </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="ui raised segment">
-                  <span class="ui blue label">
-                      July 2013 - August 2017
-                  </span> 
-                  <div class="ui left aligned">
-                    <div class="workdetails">
-                      <div class="title">WhereIsMyTransport, Cape Town</div>
-                      <div class="subtitle">Full Stack Software Engineer</div>
-                    </div>
+              
 
-                    <p class="workdescription">
-                      Here I was responsible for many projects which I 
-                      managed completely from the ground up. I had large 
-                      roles to play in provisioning and management of 
-                      critical infrastructure. Spinning up support 
-                      web-services was another task I was often engaged 
-                      in due to my speed and ease with which I handled 
-                      these tasks. 
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="ui two column grid">
-              <div class="column">
-                <div class="ui raised segment">
-                  <span class="ui blue label">
-                      March 2010 - December 2011
-                  </span>
-                  <div class="ui left aligned">
-                    <div class="workdetails">
-                      <div class="title">Bitfire, Cape Town</div>
-                      <div class="subtitle">Partner</div>
-                    </div>
-
-                    <p class="workdescription">
-                      Asterisk, Web development, VoIP, Mikrotik
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="ui raised segment">
-                  <span class="ui blue label">
-                      Jan 2009 - March 2010
-                  </span> 
-                  <div class="ui left aligned">
-                    <div class="workdetails">
-                      <div class="title">Vodacom Gated Services, Cape Town</div>
-                      <div class="subtitle">Senior Network Engineer</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="ui two column grid">
+              <div class="two column stackable ui grid">
                 <div class="column">
                   <div class="ui raised segment">
                     <span class="ui blue label">
@@ -136,120 +113,159 @@
                     </span>
                     <div class="ui left aligned">
                       <div class="workdetails">
-                        <div class="title">SUGA Communications, Cape Town</div>
+                        <div class="title">Bitfire, Cape Town</div>
                         <div class="subtitle">Partner</div>
+                      </div>
+
+                      <p class="workdescription">
+                        Asterisk, Web development, VoIP, Mikrotik
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="ui raised segment">
+                    <span class="ui blue label">
+                        Jan 2009 - March 2010
+                    </span> 
+                    <div class="ui left aligned">
+                      <div class="workdetails">
+                        <div class="title">Vodacom Gated Services, Cape Town</div>
+                        <div class="subtitle">Senior Network Engineer</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-          </div>
 
-          <div class="ui tab" v-bind:class="{ active: selection == 2 }" data-tab="education">
-            <div class="ui segment raised">
-              <div class="ui sixteen column centered grid">
-                <div class="four wide column image">
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
+              <div class="two column stackable ui grid">
+                  <div class="column">
+                    <div class="ui raised segment">
+                      <span class="ui blue label">
+                          March 2010 - December 2011
+                      </span>
+                      <div class="ui left aligned">
+                        <div class="workdetails">
+                          <div class="title">SUGA Communications, Cape Town</div>
+                          <div class="subtitle">Partner</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="twelve wide column">
-                  UWC - PhD Computer Science (July 2018 - Current)
+            </div>
+
+            <div class="ui tab" v-bind:class="{ active: selection == 2 }" data-tab="education">
+              <div class="ui segment raised">
+                <div class="ui sixteen column centered grid">
+                  <div class="four wide column image">
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                  </div>
+                  <div class="twelve wide column">
+                    UWC - PhD Computer Science (July 2018 - Current)
+                  </div>
+                </div>
+              </div>
+
+              <div class="ui segment raised">
+                <div class="ui sixteen column centered grid">
+                  <div class="four wide column image">
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star outline icon"></i>
+                  </div>
+                  <div class="twelve wide column">
+                    UCT - MSc Computer Science (January 2013 - June 2014)
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="ui segment raised">
+                <div class="ui sixteen column centered grid">
+                  <div class="four wide column image">
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star outline icon"></i>
+                      <i class="star outline icon"></i>
+                  </div>
+                  <div class="twelve wide column">
+                    UCT - BSc Hons Computer Science (January 2012 - December 2012)
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="ui segment raised">
+                <div class="ui sixteen column centered grid">
+                  <div class="four wide column image">
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star icon"></i>
+                      <i class="star outline icon"></i>
+                      <i class="star outline icon"></i>
+                  </div>
+                  <div class="twelve wide column">
+                    UCT - BSc Computer Engineering (January 2004 - December 2007)
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="ui segment raised">
-              <div class="ui sixteen column centered grid">
-                <div class="four wide column image">
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star outline icon"></i>
+            <div class="ui tab" v-bind:class="{ active: selection == 3 }" data-tab="publiications">
+              <div class="ui segment raised">
+                <div class="ui sixteen column centered grid">
+                  <div class="two wide column">
+                    <i class="big edit icon"></i>
+                  </div>
+                  <div class="fourteen wide column">
+                    <b>Published:</b> Service Provisioning for Lightweight Community 
+                    Cloud Infrastructures, Conference: 2016 International 
+                    Conference on Information Resources Management 
+                  </div>
                 </div>
-                <div class="twelve wide column">
-                  UCT - MSc Computer Science (January 2013 - June 2014)
+              </div>
+
+              <div class="ui segment raised">
+                <div class="ui sixteen column centered grid">
+                  <div class="two wide column">
+                    <i class="big edit icon"></i>
+                  </div>
+                  <div class="fourteen wide column">
+                    <b>Published:</b> Monitoring Community Clouds: The 
+                    Lightweight Network Management Protocol, Conference: 
+                    Proceedings of the 2013 IEEE 10th International Conference 
+                    on Ubiquitous Intelligence & Computing and 2013 IEEE 10th
+                    International Conference on Autonomic & Trusted Computing 
+                  </div>
                 </div>
               </div>
             </div>
-
-
-            <div class="ui segment raised">
-              <div class="ui sixteen column centered grid">
-                <div class="four wide column image">
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star outline icon"></i>
-                    <i class="star outline icon"></i>
-                </div>
-                <div class="twelve wide column">
-                  UCT - BSc Hons Computer Science (January 2012 - December 2012)
-                </div>
-              </div>
-            </div>
-
-
-            <div class="ui segment raised">
-              <div class="ui sixteen column centered grid">
-                <div class="four wide column image">
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star icon"></i>
-                    <i class="star outline icon"></i>
-                    <i class="star outline icon"></i>
-                </div>
-                <div class="twelve wide column">
-                  UCT - BSc Computer Engineering (January 2004 - December 2007)
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="ui tab" v-bind:class="{ active: selection == 3 }" data-tab="publiications">
-            <div class="ui segment raised">
-              <div class="ui sixteen column centered grid">
-                <div class="two wide column">
-                  <i class="big edit icon"></i>
-                </div>
-                <div class="fourteen wide column">
-                  <b>Published:</b> Service Provisioning for Lightweight Community 
-                  Cloud Infrastructures, Conference: 2016 International 
-                  Conference on Information Resources Management 
-                </div>
-              </div>
-            </div>
-
-            <div class="ui segment raised">
-              <div class="ui sixteen column centered grid">
-                <div class="two wide column">
-                  <i class="big edit icon"></i>
-                </div>
-                <div class="fourteen wide column">
-                  <b>Published:</b> Monitoring Community Clouds: The 
-                  Lightweight Network Management Protocol, Conference: 
-                  Proceedings of the 2013 IEEE 10th International Conference 
-                  on Ubiquitous Intelligence & Computing and 2013 IEEE 10th
-                  International Conference on Autonomic & Trusted Computing 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div>
-
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-  #avatar_image {
-    position: relative;
-    top: -100px;
+  @media only screen and (min-width: 768px) {
+    #avatar_image {
+      position: relative;
+      top: -100px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    #avatar_image {
+      top: -60px;
+    }
   }
 
   .details {
@@ -257,8 +273,8 @@
   }
 
   .header {
-    position: relative;
-    top: -60px;
+    /* position: relative; */
+    /* top: -60px; */
 
     .title {
       font-size: 2em;
@@ -296,6 +312,18 @@
   .workdescription {
     text-align: justify;
     margin-top: 5px;
+  }
+
+  .workitems {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .workitems {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   .workitem {

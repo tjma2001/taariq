@@ -7,7 +7,7 @@ import 'package:taariq/header.dart';
 import 'package:taariq/home.dart';
 
 
-import 'dart:async';
+import 'dart:async'; 
 import 'dart:html';
 
 
