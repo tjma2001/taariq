@@ -1,0 +1,16 @@
+<template vuedart>
+  <div class="ui secondary pointing menu">
+    <div class="right menu" style="z-index:10">
+      <router-link tag="a" class="ui item" active-class="active" to="/" exact>home</router-link>
+      <router-link tag="a" class="ui item" active-class="active" to="/cv" exact>cv</router-link>
+      <router-link tag="a" class="ui item" active-class="active" to="/contact" exact>contact</router-link>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+  .item {
+    font-weight: bolder;
+    font-size: large;
+  }
+</style>

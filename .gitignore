@@ -1,0 +1,5 @@
+.packages
+vue/.dart_tool
+src/.dart_tool
+src/build
+node_modules
