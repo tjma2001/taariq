@@ -24,7 +24,7 @@
       background-image: url(/assets/base.jpg);
       background-size: cover;
       background-position: center top;
-      height: 25vh;
+      height: 62vh;
       width: 100vw;
       text-align: center;
       position: absolute;
@@ -62,8 +62,8 @@
     }
 
     .footer {
-      
-      top: 10px;
+      height: 4em;
+      top: 15px;
     }
   </style>
 </head>
@@ -73,9 +73,10 @@
     
   <div id="app" 
     class="ui vertical masthead center aligned segment"
-    style="display:flex; min-height: 100vh; flex-direction: column">
+    style="display:flex; min-height: 100vh; flex-direction: column; border: 0">
+    <div id="banner"></div>
     <div style="flex:1">
-      <router-view></router-view>
+      <router-view class="ui vertical stripe intro segment"></router-view>
     </div>
     <div class="ui inverted vertical footer segment">
       <div class="ui container">
