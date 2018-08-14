@@ -4,3 +4,5 @@ src/.dart_tool
 src/build
 node_modules
 build
+firebase-debug.log
+hosting.0.cache
