@@ -1,11 +1,11 @@
 import 'package:vue/vue.dart';
 import 'package:vue/plugins/vue_router.dart';
 
+import 'package:taariq/article.dart';
 import 'package:taariq/cv.dart';
 import 'package:taariq/contact.dart';
 import 'package:taariq/header.dart';
 import 'package:taariq/home.dart';
-
 
 import 'dart:async'; 
 import 'dart:html';
@@ -25,12 +25,15 @@ class App extends VueAppBase with VueRouterMixin {
 App app;
 
 Future main() async {
-  final router = VueRouter(routes: [
-    VueRoute(path: '/', component: Home()),
-    VueRoute(path: '/cv', component: Cv()),
-    VueRoute(path: '/contact', component: Contact()),
-  ],
-);
+  final router = VueRouter(
+    mode: VueRouterMode.history,
+    routes: [
+      VueRoute(path: '/', component: Home()),
+      VueRoute(path: '/articles', component: Article()),
+      VueRoute(path: '/cv', component: Cv()),
+      VueRoute(path: '/contact', component: Contact()),
+    ],
+  );
 
   app = new App();
   app.create(options: [router]);

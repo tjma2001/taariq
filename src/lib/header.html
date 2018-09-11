@@ -5,6 +5,25 @@
         <router-link tag="a" class="ui item" active-class="active" to="/" exact>home</router-link>
         <router-link tag="a" class="ui item" active-class="active" to="/cv" exact>cv</router-link>
         <router-link tag="a" class="ui item" active-class="active" to="/contact" exact>contact</router-link>
+        <div class="ui dropdown item">
+          articles
+          <i class="dropdown icon"></i>
+          <div class="ui inverted secondary pointing menu black">
+            <div v-for="(value, key, index) in articleMenu">
+              <router-link
+                tag="a"
+                class="ui item black"
+                style="background-color: rgba(40,50,40,0.5)"
+                active-class="active"
+                :to="{
+                  path: '/articles?id=' + getLinkText(value), 
+                  params: { article: getLinkText(value) }
+                }">
+                {{ getLinkText(value) }}
+              </router-link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
